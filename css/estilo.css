@@ -314,3 +314,63 @@ img { max-width: 100%; display: block; }
 .proyecto.ancho { grid-column: 1 / -1; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 1.8rem; align-items: center; }
 .proyecto.ancho .brilla > img { aspect-ratio: 16 / 10; object-fit: cover; }
 @media (max-width: 620px) { .proyecto.ancho { grid-template-columns: 1fr; } }
+
+/* ---------- Escaparates: cada app con su escenario y su color ---------- */
+.escaparate { --app: #19c37d; --app-suave: rgb(25 195 125 / .10);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center;
+  padding: clamp(1.5rem, 4vw, 3.2rem); margin-bottom: clamp(1.5rem, 3vw, 2.2rem); border-radius: 28px; overflow: hidden;
+  background: radial-gradient(120% 90% at 85% 50%, var(--app-suave), transparent 70%), var(--fondo-alt); border: 1px solid var(--linea); }
+.escaparate.invertido .esc-texto { order: 2; }
+.app-arqueo { --app: #e8a33d; --app-suave: rgb(232 163 61 / .16); }
+.app-despertador { --app: #f59e0b; --app-suave: rgb(99 102 241 / .14); --app2: #6366f1; }
+.app-dualsense { --app: #7c5cff; --app-suave: rgb(124 92 255 / .14); }
+.esc-tipo { display: flex; align-items: center; gap: .6rem; font-weight: 700; font-size: .95rem; color: var(--tinta-suave); }
+.esc-sello { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--app); color: #fff; box-shadow: 0 8px 20px -8px var(--app); }
+.app-despertador .esc-sello { background: var(--app2); box-shadow: 0 8px 20px -8px var(--app2); }
+.escaparate h3 { margin-top: 1rem; font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+.esc-frase { margin-top: .8rem; font-size: 1.25rem; font-weight: 500; line-height: 1.4; }
+.esc-lista { list-style: none; margin: 1.3rem 0 0; padding: 0; display: grid; gap: .55rem; }
+.esc-lista li { position: relative; padding-left: 1.5rem; color: var(--tinta-suave); }
+.esc-lista li::before { content: ""; position: absolute; left: 0; top: .55em; width: .6rem; height: .6rem; border-radius: 50%; background: var(--app); }
+.app-despertador .esc-lista li::before { background: var(--app2); }
+
+/* Celulares en abanico que brillan con el color de la app */
+.telefonos { position: relative; height: clamp(380px, 42vw, 540px); }
+.tel { position: absolute; top: 50%; left: 50%; margin: 0; width: clamp(150px, 15.5vw, 215px); aspect-ratio: 540 / 1169;
+  border: 7px solid #0a0c10; border-radius: 30px; overflow: hidden; background: #0a0c10;
+  box-shadow: 0 30px 60px -25px rgb(0 0 0 / .45), 0 0 0 1px rgb(255 255 255 / .06);
+  transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out); }
+.tel img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.t-frente { z-index: 3; transform: translate(-50%, -50%); box-shadow: 0 30px 70px -18px var(--app), 0 0 0 1px rgb(255 255 255 / .08); }
+.app-despertador .t-frente { box-shadow: 0 30px 70px -18px var(--app2), 0 0 0 1px rgb(255 255 255 / .08); }
+.t-atras { z-index: 1; transform: translate(-118%, -46%) rotate(-8deg) scale(.88); opacity: .95; }
+.t-lado  { z-index: 2; transform: translate(18%, -44%) rotate(7deg) scale(.88); opacity: .95; }
+@media (hover: hover) and (pointer: fine) {
+  .escaparate:hover .t-frente { transform: translate(-50%, -54%) scale(1.03); }
+  .escaparate:hover .t-atras { transform: translate(-128%, -46%) rotate(-11deg) scale(.88); }
+  .escaparate:hover .t-lado  { transform: translate(28%, -44%) rotate(10deg) scale(.88); }
+}
+.escaparate:focus-visible .t-frente { transform: translate(-50%, -54%) scale(1.03); }
+
+/* Pantalla de computadora para la app web */
+.pantalla { border-radius: 16px; overflow: hidden; border: 1px solid rgb(255 255 255 / .1); background: #0d0f1a;
+  box-shadow: 0 30px 70px -22px var(--app); transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+  transition: transform .5s var(--ease-out); }
+.pantalla-barra { display: flex; gap: 6px; padding: 10px 12px; background: #161a2b; }
+.pantalla-barra span { width: 10px; height: 10px; border-radius: 50%; background: #3a4060; }
+.pantalla-barra span:nth-child(1) { background: #ff5f57; } .pantalla-barra span:nth-child(2) { background: #febc2e; } .pantalla-barra span:nth-child(3) { background: #28c840; }
+.pantalla img { width: 100%; height: auto; }
+@media (hover: hover) and (pointer: fine) { .escaparate:hover .pantalla { transform: perspective(1200px) rotateY(0) rotateX(0) translateY(-4px); } }
+
+.mas-apps { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: .5rem; }
+.escaparate:focus-visible { outline: 3px solid var(--app); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) { .tel, .pantalla { transition: none; } }
+@media (max-width: 900px) {
+  .escaparate { grid-template-columns: 1fr; }
+  .escaparate.invertido .esc-texto { order: 0; }
+  .telefonos { height: 420px; }
+  .tel { width: 165px; }
+  .mas-apps { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) { .tel { width: 140px; } .telefonos { height: 360px; } .t-atras { transform: translate(-105%, -46%) rotate(-8deg) scale(.85); } .t-lado { transform: translate(5%, -44%) rotate(7deg) scale(.85); } }
