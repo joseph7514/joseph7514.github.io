@@ -4,19 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joseph Choez — Sistemas a medida para restaurantes, hoteles y negocios</title>
-<meta name="description" content="Desarrollo sistemas a medida en Ecuador: pedidos desde el celular, comandas a cocina, caja, inventario, recetas con costos y facturación electrónica del SRI.">
+<meta name="description" content="Hago sistemas a medida en Ecuador: pedidos desde el celular, comandas que salen solas en cocina, caja, inventario, recetas con costos y facturación electrónica del SRI.">
 <meta property="og:title" content="Joseph Choez — Sistemas a medida para restaurantes y hoteles">
-<meta property="og:description" content="Pedidos desde el celular, cocina, caja, inventario y facturación electrónica. Un sistema real, en uso todos los días.">
+<meta property="og:description" content="Pedidos desde el celular, comandas a cocina, caja, inventario y facturación electrónica. Un sistema real, en uso todos los días.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://joseph7514.github.io/img/portada.png">
-<meta name="theme-color" content="#2563eb">
+<meta property="og:image" content="https://joseph7514.github.io/img/panel.png">
+<meta name="theme-color" content="#1f4a35">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/estilo.css">
 <script>
-  // Tema antes de pintar, para que no parpadee
   (function () {
     var t = localStorage.getItem('tema');
     if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
@@ -59,9 +58,9 @@
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
 <header class="barra">
-  <div class="contenedor">
-    <a class="marca" href="#inicio" aria-label="Joseph Choez, inicio">
-      <span class="marca-logo" aria-hidden="true">JC</span>
+  <div class="contenedor barra-fila">
+    <a class="marca" href="#inicio">
+      <span class="marca-sello" aria-hidden="true">JC</span>
       <span>Joseph Choez</span>
     </a>
     <nav aria-label="Secciones">
@@ -70,9 +69,9 @@
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#como-trabajo">Cómo trabajo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+    <a class="boton boton-chico" href="#contacto">Escríbeme</a>
     <button class="boton-tema" type="button" id="boton-tema" aria-label="Cambiar entre tema claro y oscuro">
       <svg class="ico luna" aria-hidden="true"><use href="#i-moon"/></svg>
       <svg class="ico sol" aria-hidden="true"><use href="#i-sun"/></svg>
@@ -83,183 +82,190 @@
 <main id="contenido">
 
 <section class="portada" id="inicio">
-  <div class="contenedor">
-    <div>
-      <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg> Desarrollador independiente · Ecuador</span>
-      <h1>Sistemas a medida para restaurantes, hoteles y negocios</h1>
-      <p class="bajada">Soy Joseph Choez. Hago programas que el personal usa todos los días: pedidos desde el celular, comandas que salen solas en cocina, caja, inventario, recetas con costos y facturación electrónica. Los instalo, los pruebo y doy soporte.</p>
+  <div class="contenedor portada-rejilla">
+    <div class="portada-texto">
+      <h1>Hago el sistema con el que tu restaurante trabaja todos los días.</h1>
+      <p class="bajada">Soy Joseph Choez, desarrollador en Ecuador. El mesero toma el pedido en su celular, la comanda sale sola en cocina, la caja cuadra y la bodega se descuenta con cada plato. Lo instalo en tu local y te acompaño.</p>
       <div class="acciones">
-        <a class="boton boton-acento" href="#contacto">
-          <svg class="ico" aria-hidden="true"><use href="#i-message-square"/></svg> Cuéntame tu proyecto
+        <a class="boton boton-principal" href="https://wa.me/593989174937?text=Hola%20Joseph%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20un%20sistema%20para%20mi%20negocio">
+          <svg class="ico" aria-hidden="true"><use href="#i-message-square"/></svg> Escribir por WhatsApp
         </a>
-        <a class="boton boton-borde" href="#anturios">
-          Ver un sistema en uso <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-        </a>
+        <a class="boton boton-linea" href="#anturios">Ver un sistema en uso</a>
       </div>
+      <p class="hechos">En uso diario en un restaurante de hotel desde septiembre de 2026, con 170 pruebas automáticas antes de cada versión.</p>
     </div>
-    <div class="portada-foto">
-      <img src="img/panel.png" alt="Panel del administrador del sistema Anturios con el menú lateral y los accesos a ventas, cocina, bodega y reportes" width="1280" height="590">
-    </div>
-  </div>
-  <div class="contenedor">
-    <div class="cifras">
-      <div class="cifra"><strong>En uso diario</strong><span>en un restaurante de hotel desde septiembre de 2026</span></div>
-      <div class="cifra"><strong>4 roles</strong><span>administrador, jefe, meseros y cocina, cada uno con lo suyo</span></div>
-      <div class="cifra"><strong>170+</strong><span>pruebas automáticas antes de cada versión</span></div>
-      <div class="cifra"><strong>30 meseros</strong><span>a la vez en pruebas de carga, respondiendo en ~0,1 s</span></div>
+
+    <div class="impresora" aria-label="Comanda de ejemplo con lo que incluye un sistema">
+      <div class="impresora-boca" aria-hidden="true"></div>
+      <div class="ticket-marco">
+        <div class="ticket">
+          <p class="t-cabeza">COMANDA Nº 000001</p>
+          <p class="t-meta"><span>Mesa: tu negocio</span><span>Mesero: Joseph</span></p>
+          <hr>
+          <ul class="t-items">
+            <li><b>1x</b> Pedidos desde el celular</li>
+            <li><b>1x</b> Comandas a cocina y barra</li>
+            <li><b>1x</b> Caja, turnos y cierre del día</li>
+            <li><b>1x</b> Bodega y recetas con costo</li>
+            <li><b>1x</b> Facturación electrónica SRI</li>
+            <li><b>1x</b> Reportes para el dueño</li>
+          </ul>
+          <hr>
+          <p class="t-nota">NOTA: instalado en tu local, probado y con soporte.</p>
+          <p class="t-pie">Enviado a cocina, listo para servir</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion-alt" id="anturios">
+<section class="seccion" id="anturios">
   <div class="contenedor">
-    <div class="seccion-cabeza aparece">
-      <p class="antetitulo">Caso real</p>
-      <h2>Sistema Anturios: el restaurante de una hostería, de punta a punta</h2>
-      <p>Un restaurante dentro de un hotel en Ecuador necesitaba dejar el papel: comandas a mano, cuentas que no cuadraban y una bodega que nadie sabía cuánto tenía. Hice un sistema completo a su medida, lo instalé en su PC y lo sigo mejorando por versiones.</p>
-    </div>
-
-    <div class="caso">
-      <div class="aparece">
-        <h3>Qué resuelve</h3>
-        <ul class="lista">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Los meseros toman el pedido en su celular y la comanda se imprime sola en cocina.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>La cocina ve los pedidos en pantalla, con alarma cuando llega uno nuevo.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Caja con cuentas divididas, turnos, arqueo y cierre del día que le llega por correo al jefe.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Bodega por secciones, producción y mermas: se descuenta solo lo que sale de cada plato.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Recetas y fichas técnicas con costo por porción, cargadas desde Excel.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Conectado al sistema del hotel: sabe qué huéspedes tienen desayuno o full day incluido.</span></li>
-        </ul>
-      </div>
-      <div class="aparece">
-        <h3>Cómo está hecho</h3>
-        <ul class="lista">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-server"/></svg><span>Corre en la PC del local: si se va el internet, el restaurante sigue trabajando.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-printer"/></svg><span>Imprime en térmicas de caja (USB) y de cocina (red).</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-smartphone"/></svg><span>Se entra desde cualquier celular por Wi-Fi o con un link propio por internet.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-cloud-download"/></svg><span>Actualizaciones firmadas que el administrador instala con un botón, sin perder datos.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-shield-check"/></svg><span>Contraseñas cifradas, permisos por rol y códigos de un solo uso para anular cobros.</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-book-open"/></svg><span>Cada pantalla trae su propia guía para que el personal aprenda solo.</span></li>
-        </ul>
-        <div class="chips" aria-label="Tecnologías">
-          <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
-          <span class="chip">HTML · CSS · JavaScript</span><span class="chip">Cloudflare</span><span class="chip">Playwright · k6</span>
-        </div>
-      </div>
+    <div class="cabeza">
+      <h2>Caso real: Sistema Anturios</h2>
+      <p>Un restaurante dentro de una hostería en Ecuador trabajaba con comandas a mano, cuentas que no cuadraban y una bodega que nadie sabía cuánto tenía. Hice un sistema completo a su medida, lo instalé en su PC y lo sigo mejorando por versiones.</p>
     </div>
 
     <div class="galeria">
-      <figure class="aparece celular"><img src="img/mesero.png" alt="Celular del mesero tomando un pedido: platos de la carta con precio, notas para cocina y botón Añadir" loading="lazy" width="780" height="1348"><figcaption>El mesero toma el pedido en su celular</figcaption></figure>
-      <figure class="aparece"><img src="img/cocina.png" alt="Pedidos en cocina por mesa, con cada comanda y sus platos y botones para cambiar, anular o reimprimir" loading="lazy" width="1280" height="700"><figcaption>Lo que ya se mandó a cocina, mesa por mesa</figcaption></figure>
-      <figure class="aparece"><img src="img/recetas.png" alt="Ficha técnica de un plato con ingredientes, gramaje, factor de rendimiento y costo por porción" loading="lazy" width="1280" height="800"><figcaption>Ficha técnica con gramaje y costo por porción</figcaption></figure>
+      <figure class="celular"><img src="img/mesero.png" alt="Celular del mesero tomando un pedido: platos de la carta con precio, notas para cocina y botón Añadir" loading="lazy" width="780" height="1348"><figcaption>El mesero toma el pedido en su celular.</figcaption></figure>
+      <figure><img src="img/cocina.png" alt="Pedidos en cocina por mesa, con cada comanda y sus platos y botones para cambiar, anular o reimprimir" loading="lazy" width="1280" height="700"><figcaption>Cocina ve lo que ya se pidió, mesa por mesa.</figcaption></figure>
+      <figure><img src="img/recetas.png" alt="Ficha técnica de un plato con ingredientes, gramaje, factor de rendimiento y costo por porción" loading="lazy" width="1280" height="800"><figcaption>Cada plato tiene su ficha técnica con gramaje y costo.</figcaption></figure>
     </div>
-    <p class="nota">Las capturas son de una copia de demostración con datos de prueba, no de la base del restaurante.</p>
+    <p class="nota">Capturas de una copia de demostración con datos de prueba.</p>
+
+    <div class="caso">
+      <div>
+        <h3>Qué resuelve</h3>
+        <ul class="lista">
+          <li>La comanda se imprime sola en cocina cuando el mesero la envía.</li>
+          <li>La cocina ve los pedidos en pantalla, con alarma cuando llega uno nuevo.</li>
+          <li>Caja con cuentas divididas, turnos, arqueo y cierre del día por correo al jefe.</li>
+          <li>Bodega por secciones, producción y mermas: se descuenta lo que lleva cada plato.</li>
+          <li>Fichas técnicas con costo por porción, cargadas desde Excel.</li>
+          <li>Sabe qué huéspedes del hotel tienen desayuno o full day incluido.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cómo está hecho</h3>
+        <ul class="lista">
+          <li>Corre en la PC del local: si se va el internet, el restaurante sigue trabajando.</li>
+          <li>Imprime en térmicas de caja (USB) y de cocina (red).</li>
+          <li>Se entra desde cualquier celular por Wi-Fi o con un link propio.</li>
+          <li>El administrador instala las actualizaciones con un botón, sin perder datos.</li>
+          <li>Permisos por rol y códigos de un solo uso para anular cobros.</li>
+          <li>Probado con 30 meseros a la vez: responde en una décima de segundo.</li>
+        </ul>
+        <p class="tecnologias">Java, Spring Boot, MySQL, HTML, CSS y JavaScript, Cloudflare, Playwright y k6.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="seccion" id="servicios">
+<section class="seccion seccion-verde" id="servicios">
   <div class="contenedor">
-    <div class="seccion-cabeza aparece">
-      <p class="antetitulo">Servicios</p>
+    <div class="cabeza">
       <h2>Lo que puedo hacer por tu negocio</h2>
-      <p>No vendo un programa de caja genérico. Me siento contigo, veo cómo trabaja tu gente y hago el sistema para eso.</p>
+      <p>No vendo un programa de caja genérico. Voy a tu local, veo cómo trabaja tu gente y hago el sistema para eso.</p>
     </div>
-    <div class="rejilla r4">
-      <article class="tarjeta aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg></div>
-        <h3>Sistemas para restaurantes</h3>
+    <ul class="servicios">
+      <li class="modulo" tabindex="0">
+        <svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg>
+        <h3>Sistemas para restaurantes y bares</h3>
         <p>Pedidos, comandas, cocina, caja, bodega, recetas y reportes en un solo lugar.</p>
-      </article>
-      <article class="tarjeta aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+      </li>
+      <li class="modulo" tabindex="0">
+        <svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg>
         <h3>Sistemas a medida</h3>
-        <p>Inventario, ventas, turnos o lo que tu negocio lleve hoy en papel o en Excel.</p>
-      </article>
-      <article class="tarjeta aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-receipt-text"/></svg></div>
+        <p>Inventario, ventas o turnos: lo que tu negocio hoy lleva en papel o en Excel.</p>
+      </li>
+      <li class="modulo" tabindex="0">
+        <svg class="ico" aria-hidden="true"><use href="#i-receipt-text"/></svg>
         <h3>Facturación electrónica</h3>
         <p>Facturas al SRI desde tu propio sistema, con el RIDE en PDF.</p>
-      </article>
-      <article class="tarjeta aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></div>
+      </li>
+      <li class="modulo" tabindex="0">
+        <svg class="ico" aria-hidden="true"><use href="#i-smartphone"/></svg>
+        <h3>Apps para el celular</h3>
+        <p>Apps Android que funcionan sin internet y guardan los datos en el teléfono.</p>
+      </li>
+      <li class="modulo" tabindex="0">
+        <svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg>
         <h3>Instalación y soporte</h3>
-        <p>Dejo todo andando en tu local: PC, red, impresoras térmicas y capacitación.</p>
-      </article>
-    </div>
+        <p>Dejo todo andando: PC, red, impresoras térmicas y capacitación al personal.</p>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section class="seccion seccion-alt" id="proyectos">
+<section class="seccion" id="proyectos">
   <div class="contenedor">
-    <div class="seccion-cabeza aparece">
-      <p class="antetitulo">Otros proyectos</p>
-      <h2>Más trabajos</h2>
+    <div class="cabeza">
+      <h2>Otros trabajos</h2>
     </div>
-    <div class="rejilla r2 apps">
-      <article class="tarjeta proyecto con-foto aparece">
-        <img class="proyecto-foto" src="img/arqueo-bar.png" alt="Pantalla de bienvenida de Arqueo Bar: vender rápido, recibir y entregar el bar, todo guardado en el celular con PIN" loading="lazy" width="780" height="1220">
+    <div class="proyectos">
+      <article class="modulo proyecto" tabindex="0">
+        <img src="img/arqueo-bar.png" alt="Pantalla de bienvenida de Arqueo Bar: vender rápido, recibir y entregar el bar, todo guardado en el celular con PIN" loading="lazy" width="780" height="1220">
         <div>
           <h3>Arqueo Bar</h3>
-          <p>App Android para la persona que atiende el bar de un hotel. Toca el trago vendido y el inventario se descuenta solo según la receta. Al empezar y al terminar el turno cuenta lo que recibe y entrega, y las diferencias quedan como respaldo. Todo se guarda en el celular, con PIN, y se actualiza a distancia.</p>
-          <div class="chips"><span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">JavaScript</span><span class="chip">Sin conexión</span></div>
+          <p>App Android para quien atiende el bar de un hotel. Toca el trago vendido y el inventario se descuenta según la receta. Al empezar y terminar el turno cuenta lo que recibe y entrega, y las diferencias quedan de respaldo.</p>
+          <p class="tecnologias">Android, Kotlin y JavaScript. Funciona sin internet.</p>
         </div>
       </article>
-      <article class="tarjeta proyecto con-foto aparece">
-        <img class="proyecto-foto" src="img/despertador.png" alt="Pantalla Hoy de Despertador U: próxima alarma, hora de dormir, respuestas automáticas y recomendación del día" loading="lazy" width="780" height="1220">
+      <article class="modulo proyecto" tabindex="0">
+        <img src="img/despertador.png" alt="Pantalla Hoy de Despertador U: próxima alarma, hora de dormir, respuestas automáticas y recomendación del día" loading="lazy" width="780" height="1220">
         <div>
           <h3>Despertador U</h3>
-          <p>App Android para estudiantes: alarmas que no fallan, horario de clases, estudio en 5 pasos con repasos espaciados y respuestas automáticas en WhatsApp mientras estás en clase. Trae un asistente con IA que corre dentro del teléfono, sin internet y sin sacar tus datos.</p>
-          <div class="chips"><span class="chip">Android</span><span class="chip">Kotlin</span><span class="chip">IA local</span><span class="chip">Sin conexión</span></div>
+          <p>App Android para estudiantes: alarmas que no fallan, horario de clases, estudio en 5 pasos con repasos y respuestas automáticas en WhatsApp mientras estás en clase. Trae un asistente con IA que corre dentro del teléfono.</p>
+          <p class="tecnologias">Android, Kotlin e IA local. Funciona sin internet.</p>
+        </div>
+      </article>
+      <article class="modulo proyecto sin-foto" tabindex="0">
+        <svg class="ico grande" aria-hidden="true"><use href="#i-file-text"/></svg>
+        <div>
+          <h3>Motor de facturación electrónica del SRI</h3>
+          <p>Arma, firma y envía facturas electrónicas al SRI y genera el RIDE. Se conecta a cualquier sistema. Tiene más de 120 pruebas automáticas.</p>
+          <p class="tecnologias">Java, XML firmado y servicio HTTP.</p>
+        </div>
+      </article>
+      <article class="modulo proyecto sin-foto" tabindex="0">
+        <svg class="ico grande" aria-hidden="true"><use href="#i-book-open"/></svg>
+        <div>
+          <h3>Leamos juntos</h3>
+          <p>App web que se instala en el celular para leer un libro de a dos, con plan de lectura, notas y preguntas. Funciona sin internet.</p>
+          <a class="enlace" href="https://joseph7514.github.io/leamos-juntos/">Abrir la app</a>
         </div>
       </article>
     </div>
-    <div class="rejilla r2" style="margin-top:1.1rem">
-      <article class="tarjeta proyecto aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-file-text"/></svg></div>
-        <h3>Motor de facturación electrónica del SRI</h3>
-        <p>Un módulo independiente que arma, firma y envía facturas electrónicas al SRI y genera el RIDE. Se puede conectar a cualquier sistema. Tiene más de 120 pruebas automáticas y está probado en el ambiente de pruebas del SRI.</p>
-        <div class="chips"><span class="chip">Java</span><span class="chip">XML firmado</span><span class="chip">Servicio HTTP</span></div>
-      </article>
-      <article class="tarjeta proyecto aparece">
-        <div class="icono-caja"><svg class="ico" aria-hidden="true"><use href="#i-book-open"/></svg></div>
-        <h3>Leamos juntos</h3>
-        <p>Una app web que se instala en el celular para leer un libro de a dos: plan de lectura, notas y preguntas para conversar. Funciona sin internet.</p>
-        <div class="chips"><span class="chip">PWA</span><span class="chip">JavaScript</span><span class="chip">Sin conexión</span></div>
-        <a class="enlace" href="https://joseph7514.github.io/leamos-juntos/">Abrir la app <svg class="ico" aria-hidden="true"><use href="#i-external-link"/></svg></a>
-      </article>
-    </div>
   </div>
 </section>
 
-<section class="seccion" id="como-trabajo">
+<section class="seccion seccion-alt" id="como-trabajo">
   <div class="contenedor">
-    <div class="seccion-cabeza aparece">
-      <p class="antetitulo">Cómo trabajo</p>
-      <h2>Sin sorpresas, de principio a fin</h2>
+    <div class="cabeza">
+      <h2>Cómo trabajo</h2>
     </div>
-    <div class="rejilla r4 pasos">
-      <article class="tarjeta paso aparece"><h3>Te escucho</h3><p>Voy a tu local, veo cómo trabajan y anoto qué necesitas de verdad.</p></article>
-      <article class="tarjeta paso aparece"><h3>Propuesta clara</h3><p>Precio cerrado, plazo y lo que incluye, por escrito y con contrato.</p></article>
-      <article class="tarjeta paso aparece"><h3>Entregas por versiones</h3><p>Ves avances seguido. Cada versión pasa pruebas antes de llegar a tu local.</p></article>
-      <article class="tarjeta paso aparece"><h3>Instalo y te acompaño</h3><p>Instalación, capacitación al personal y garantía de errores.</p></article>
-    </div>
+    <ol class="pasos">
+      <li><span class="paso-n">1</span><h3>Te escucho</h3><p>Voy a tu local, veo cómo trabajan y anoto lo que de verdad necesitas.</p></li>
+      <li><span class="paso-n">2</span><h3>Propuesta clara</h3><p>Precio cerrado, plazo y lo que incluye, por escrito y con contrato.</p></li>
+      <li><span class="paso-n">3</span><h3>Entregas por versiones</h3><p>Ves avances seguido. Cada versión pasa pruebas antes de llegar a tu local.</p></li>
+      <li><span class="paso-n">4</span><h3>Instalo y te acompaño</h3><p>Instalación, capacitación al personal y garantía de errores.</p></li>
+    </ol>
   </div>
 </section>
 
-<section class="seccion seccion-alt contacto" id="contacto">
-  <div class="contenedor">
-    <div class="tarjeta aparece">
-      <p class="antetitulo">Contacto</p>
+<section class="contacto" id="contacto">
+  <div class="contenedor contacto-fila">
+    <div>
       <h2>¿Tu negocio todavía trabaja en papel o en Excel?</h2>
-      <p>Escríbeme, cuéntame cómo trabajan y te digo cómo te puede ayudar un sistema. Sin compromiso.</p>
-      <div class="acciones">
-        <a class="boton boton-acento" href="https://wa.me/593989174937?text=Hola%20Joseph%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20un%20sistema%20para%20mi%20negocio">
-          <svg class="ico" aria-hidden="true"><use href="#i-message-square"/></svg> Escribir por WhatsApp
-        </a>
-        <a class="boton boton-borde" href="mailto:josephchoez100@gmail.com">
-          <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> Enviar un correo
-        </a>
-      </div>
+      <p>Cuéntame cómo trabajan y te digo cómo te puede ayudar un sistema.</p>
+    </div>
+    <div class="acciones">
+      <a class="boton boton-principal" href="https://wa.me/593989174937?text=Hola%20Joseph%2C%20vi%20tu%20p%C3%A1gina%20y%20quiero%20un%20sistema%20para%20mi%20negocio">
+        <svg class="ico" aria-hidden="true"><use href="#i-message-square"/></svg> WhatsApp 098 917 4937
+      </a>
+      <a class="boton boton-claro" href="mailto:josephchoez100@gmail.com">
+        <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> josephchoez100@gmail.com
+      </a>
     </div>
   </div>
 </section>
@@ -267,9 +273,9 @@
 </main>
 
 <footer class="pie">
-  <div class="contenedor">
+  <div class="contenedor pie-fila">
     <span>© 2026 Joseph Sebastián Choez Bravo</span>
-    <span>Íconos <a href="https://lucide.dev">Lucide</a> (ISC)</span>
+    <span>Íconos de <a href="https://lucide.dev">Lucide</a></span>
   </div>
 </footer>
 
@@ -279,13 +285,20 @@
     document.documentElement.dataset.tema = t;
     localStorage.setItem('tema', t);
   });
+  // Marca en el menú la sección que se está viendo
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visto'); io.unobserve(e.target); } });
-    }, { rootMargin: '0px 0px -10% 0px' });
-    document.querySelectorAll('.aparece').forEach(function (el) { io.observe(el); });
-  } else {
-    document.querySelectorAll('.aparece').forEach(function (el) { el.classList.add('visto'); });
+    var enlaces = {};
+    document.querySelectorAll('.menu a').forEach(function (a) { enlaces[a.getAttribute('href').slice(1)] = a; });
+    var vigia = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var a = enlaces[e.target.id];
+        if (a && e.isIntersecting) {
+          Object.values(enlaces).forEach(function (x) { x.removeAttribute('aria-current'); });
+          a.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { vigia.observe(s); });
   }
 </script>
 </body>
