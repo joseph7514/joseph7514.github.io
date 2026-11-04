@@ -152,6 +152,11 @@ img { max-width: 100%; display: block; }
 .proyecto a.enlace { display: inline-flex; align-items: center; gap: .35rem; font-weight: 600; margin-top: .9rem; text-decoration: none; }
 .proyecto a.enlace:hover { text-decoration: underline; }
 
+.proyecto.con-foto { display: grid; grid-template-columns: 150px 1fr; gap: 1.2rem; align-items: start; }
+.proyecto.con-foto .chips { margin-top: 1rem; padding-top: 0; }
+.proyecto-foto { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--borde); }
+@media (max-width: 560px) { .proyecto.con-foto { grid-template-columns: 1fr; } .proyecto-foto { max-width: 220px; } }
+
 /* Pasos */
 .pasos { counter-reset: paso; }
 .paso { position: relative; padding-top: 3.2rem; }
