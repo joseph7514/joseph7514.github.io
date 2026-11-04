@@ -18,7 +18,7 @@
 <script>
   (function () {
     var t = localStorage.getItem('tema');
-    if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+    if (!t) t = 'claro';
     document.documentElement.dataset.tema = t;
   })();
 </script>
@@ -117,23 +117,38 @@
       </div>
     </div>
   </div>
+  <div class="contenedor">
+    <div class="cifras">
+      <div class="cifra revela"><strong><span data-cuenta="170">170</span>+</strong><span>pruebas automáticas antes de cada versión</span></div>
+      <div class="cifra revela"><strong><span data-cuenta="30">30</span></strong><span>meseros a la vez en la prueba de carga</span></div>
+      <div class="cifra revela"><strong><span data-cuenta="4">4</span></strong><span>roles: administrador, jefe, meseros y cocina</span></div>
+      <div class="cifra revela"><strong><span data-cuenta="6">6</span></strong><span>sistemas y apps hechos y funcionando</span></div>
+    </div>
+  </div>
 </section>
+
+<div class="cinta" aria-label="Lo que hago">
+  <div class="cinta-pista">
+    <span>Pedidos desde el celular</span><span>Comandas a cocina</span><span>Caja y turnos</span><span>Bodega e inventario</span><span>Recetas con costo</span><span>Facturación SRI</span><span>Impresoras térmicas</span><span>Apps Android</span>
+    <span aria-hidden="true">Pedidos desde el celular</span><span aria-hidden="true">Comandas a cocina</span><span aria-hidden="true">Caja y turnos</span><span aria-hidden="true">Bodega e inventario</span><span aria-hidden="true">Recetas con costo</span><span aria-hidden="true">Facturación SRI</span><span aria-hidden="true">Impresoras térmicas</span><span aria-hidden="true">Apps Android</span>
+  </div>
+</div>
 
 <section class="seccion" id="anturios">
   <div class="contenedor">
-    <div class="cabeza">
+    <div class="cabeza revela">
       <h2>Caso real: Sistema Anturios</h2>
       <p>Un restaurante dentro de una hostería en Ecuador trabajaba con comandas a mano, cuentas que no cuadraban y una bodega que nadie sabía cuánto tenía. Hice un sistema completo a su medida, lo instalé en su PC y lo sigo mejorando por versiones.</p>
     </div>
 
     <div class="galeria">
-      <figure class="celular"><img src="img/mesero.png" alt="Celular del mesero tomando un pedido: platos de la carta con precio, notas para cocina y botón Añadir" loading="lazy" width="780" height="1348"><figcaption>El mesero toma el pedido en su celular.</figcaption></figure>
-      <figure><img src="img/cocina.png" alt="Pedidos en cocina por mesa, con cada comanda y sus platos y botones para cambiar, anular o reimprimir" loading="lazy" width="1280" height="700"><figcaption>Cocina ve lo que ya se pidió, mesa por mesa.</figcaption></figure>
-      <figure><img src="img/recetas.png" alt="Ficha técnica de un plato con ingredientes, gramaje, factor de rendimiento y costo por porción" loading="lazy" width="1280" height="800"><figcaption>Cada plato tiene su ficha técnica con gramaje y costo.</figcaption></figure>
+      <figure class="celular revela"><div class="brilla"><img src="img/mesero.png" alt="Celular del mesero tomando un pedido: platos de la carta con precio, notas para cocina y botón Añadir" loading="lazy" width="780" height="1348"></div><figcaption>El mesero toma el pedido en su celular.</figcaption></figure>
+      <figure class="revela"><div class="brilla"><img src="img/cocina.png" alt="Pedidos en cocina por mesa, con cada comanda y sus platos y botones para cambiar, anular o reimprimir" loading="lazy" width="1280" height="700"></div><figcaption>Cocina ve lo que ya se pidió, mesa por mesa.</figcaption></figure>
+      <figure class="revela"><div class="brilla"><img src="img/recetas.png" alt="Ficha técnica de un plato con ingredientes, gramaje, factor de rendimiento y costo por porción" loading="lazy" width="1280" height="800"></div><figcaption>Cada plato tiene su ficha técnica con gramaje y costo.</figcaption></figure>
     </div>
     <p class="nota">Capturas de una copia de demostración con datos de prueba.</p>
 
-    <div class="caso">
+    <div class="caso revela">
       <div>
         <h3>Qué resuelve</h3>
         <ul class="lista">
@@ -163,32 +178,32 @@
 
 <section class="seccion seccion-verde" id="servicios">
   <div class="contenedor">
-    <div class="cabeza">
+    <div class="cabeza revela">
       <h2>Lo que puedo hacer por tu negocio</h2>
       <p>No vendo un programa de caja genérico. Voy a tu local, veo cómo trabaja tu gente y hago el sistema para eso.</p>
     </div>
     <ul class="servicios">
-      <li class="modulo" tabindex="0">
+      <li class="modulo revela" tabindex="0">
         <svg class="ico" aria-hidden="true"><use href="#i-utensils"/></svg>
         <h3>Sistemas para restaurantes y bares</h3>
         <p>Pedidos, comandas, cocina, caja, bodega, recetas y reportes en un solo lugar.</p>
       </li>
-      <li class="modulo" tabindex="0">
+      <li class="modulo revela" tabindex="0">
         <svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg>
         <h3>Sistemas a medida</h3>
         <p>Inventario, ventas o turnos: lo que tu negocio hoy lleva en papel o en Excel.</p>
       </li>
-      <li class="modulo" tabindex="0">
+      <li class="modulo revela" tabindex="0">
         <svg class="ico" aria-hidden="true"><use href="#i-receipt-text"/></svg>
         <h3>Facturación electrónica</h3>
         <p>Facturas al SRI desde tu propio sistema, con el RIDE en PDF.</p>
       </li>
-      <li class="modulo" tabindex="0">
+      <li class="modulo revela" tabindex="0">
         <svg class="ico" aria-hidden="true"><use href="#i-smartphone"/></svg>
         <h3>Apps para el celular</h3>
         <p>Apps Android que funcionan sin internet y guardan los datos en el teléfono.</p>
       </li>
-      <li class="modulo" tabindex="0">
+      <li class="modulo revela" tabindex="0">
         <svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg>
         <h3>Instalación y soporte</h3>
         <p>Dejo todo andando: PC, red, impresoras térmicas y capacitación al personal.</p>
@@ -199,27 +214,35 @@
 
 <section class="seccion" id="proyectos">
   <div class="contenedor">
-    <div class="cabeza">
+    <div class="cabeza revela">
       <h2>Otros trabajos</h2>
     </div>
     <div class="proyectos">
-      <article class="modulo proyecto" tabindex="0">
-        <img src="img/arqueo-bar.png" alt="Pantalla de bienvenida de Arqueo Bar: vender rápido, recibir y entregar el bar, todo guardado en el celular con PIN" loading="lazy" width="780" height="1220">
+      <article class="revela modulo proyecto" tabindex="0">
+        <div class="brilla"><img src="img/arqueo-bar.png" alt="Pantalla de bienvenida de Arqueo Bar: vender rápido, recibir y entregar el bar, todo guardado en el celular con PIN" loading="lazy" width="780" height="1220"></div>
         <div>
           <h3>Arqueo Bar</h3>
           <p>App Android para quien atiende el bar de un hotel. Toca el trago vendido y el inventario se descuenta según la receta. Al empezar y terminar el turno cuenta lo que recibe y entrega, y las diferencias quedan de respaldo.</p>
           <p class="tecnologias">Android, Kotlin y JavaScript. Funciona sin internet.</p>
         </div>
       </article>
-      <article class="modulo proyecto" tabindex="0">
-        <img src="img/despertador.png" alt="Pantalla Hoy de Despertador U: próxima alarma, hora de dormir, respuestas automáticas y recomendación del día" loading="lazy" width="780" height="1220">
+      <article class="revela modulo proyecto" tabindex="0">
+        <div class="brilla"><img src="img/despertador.png" alt="Pantalla Hoy de Despertador U: próxima alarma, hora de dormir, respuestas automáticas y recomendación del día" loading="lazy" width="780" height="1220"></div>
         <div>
           <h3>Despertador U</h3>
           <p>App Android para estudiantes: alarmas que no fallan, horario de clases, estudio en 5 pasos con repasos y respuestas automáticas en WhatsApp mientras estás en clase. Trae un asistente con IA que corre dentro del teléfono.</p>
           <p class="tecnologias">Android, Kotlin e IA local. Funciona sin internet.</p>
         </div>
       </article>
-      <article class="modulo proyecto sin-foto" tabindex="0">
+      <article class="revela modulo proyecto ancho" tabindex="0">
+        <div class="brilla"><img src="img/dualsense.png" alt="DualSense Lab: dibujo del mando de PS5 con sus gatillos L2 y R2 y el panel para conectarlo, con pestañas de gatillos, vibración, luz y experiencia" loading="lazy" width="1280" height="800"></div>
+        <div>
+          <h3>DualSense Lab</h3>
+          <p>Una página web que habla directo con el mando de PS5 desde la computadora. Mueve los gatillos adaptativos, la vibración y la barra de luz, y trae escenas para sentirlas, como una tormenta en el bosque. Sin instalar nada: se conecta por cable o Bluetooth desde el navegador.</p>
+          <p class="tecnologias">JavaScript y WebHID.</p>
+        </div>
+      </article>
+      <article class="revela modulo proyecto sin-foto" tabindex="0">
         <svg class="ico grande" aria-hidden="true"><use href="#i-file-text"/></svg>
         <div>
           <h3>Motor de facturación electrónica del SRI</h3>
@@ -227,7 +250,7 @@
           <p class="tecnologias">Java, XML firmado y servicio HTTP.</p>
         </div>
       </article>
-      <article class="modulo proyecto sin-foto" tabindex="0">
+      <article class="revela modulo proyecto sin-foto" tabindex="0">
         <svg class="ico grande" aria-hidden="true"><use href="#i-book-open"/></svg>
         <div>
           <h3>Leamos juntos</h3>
@@ -241,14 +264,14 @@
 
 <section class="seccion seccion-alt" id="como-trabajo">
   <div class="contenedor">
-    <div class="cabeza">
+    <div class="cabeza revela">
       <h2>Cómo trabajo</h2>
     </div>
     <ol class="pasos">
-      <li><span class="paso-n">1</span><h3>Te escucho</h3><p>Voy a tu local, veo cómo trabajan y anoto lo que de verdad necesitas.</p></li>
-      <li><span class="paso-n">2</span><h3>Propuesta clara</h3><p>Precio cerrado, plazo y lo que incluye, por escrito y con contrato.</p></li>
-      <li><span class="paso-n">3</span><h3>Entregas por versiones</h3><p>Ves avances seguido. Cada versión pasa pruebas antes de llegar a tu local.</p></li>
-      <li><span class="paso-n">4</span><h3>Instalo y te acompaño</h3><p>Instalación, capacitación al personal y garantía de errores.</p></li>
+      <li class="revela"><span class="paso-n">1</span><h3>Te escucho</h3><p>Voy a tu local, veo cómo trabajan y anoto lo que de verdad necesitas.</p></li>
+      <li class="revela"><span class="paso-n">2</span><h3>Propuesta clara</h3><p>Precio cerrado, plazo y lo que incluye, por escrito y con contrato.</p></li>
+      <li class="revela"><span class="paso-n">3</span><h3>Entregas por versiones</h3><p>Ves avances seguido. Cada versión pasa pruebas antes de llegar a tu local.</p></li>
+      <li class="revela"><span class="paso-n">4</span><h3>Instalo y te acompaño</h3><p>Instalación, capacitación al personal y garantía de errores.</p></li>
     </ol>
   </div>
 </section>
@@ -299,6 +322,32 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     document.querySelectorAll('main section[id]').forEach(function (s) { vigia.observe(s); });
+  }
+  // Aparición escalonada al bajar y números que cuentan
+  var quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function contar(el) {
+    var fin = +el.dataset.cuenta, t0 = null, dur = 1100;
+    if (quieto) { el.textContent = fin; return; }
+    function paso(t) { t0 = t0 || t; var k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(fin * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(paso); }
+    requestAnimationFrame(paso);
+  }
+  if ('IntersectionObserver' in window) {
+    var grupos = new Map();
+    document.querySelectorAll('.revela').forEach(function (el) {
+      var p = el.parentElement, n = grupos.get(p) || 0; grupos.set(p, n + 1);
+      el.style.setProperty('--retraso', Math.min(n, 6) * 70 + 'ms');
+    });
+    var ojo = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visto');
+        e.target.querySelectorAll('[data-cuenta]').forEach(contar);
+        ojo.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.revela').forEach(function (el) { el.querySelectorAll('[data-cuenta]').forEach(function (n) { n.textContent = '0'; }); ojo.observe(el); });
+  } else {
+    document.querySelectorAll('.revela').forEach(function (el) { el.classList.add('visto'); });
   }
 </script>
 </body>
